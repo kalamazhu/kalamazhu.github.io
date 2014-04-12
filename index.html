@@ -17,6 +17,8 @@
 
 var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create });
 
+var text;
+var counter = 0;
 function preload() {
 
     game.load.image('sky', 'assets/sky.png');
