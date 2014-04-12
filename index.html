@@ -40,7 +40,7 @@ function create(){
     
     game.physics.enable(image, Phaser.Physics.ARCADE);
 
-    image.body.velocity.x=150;
+    image.body.velocity.x=10;
 
 
 }
@@ -49,6 +49,7 @@ function listener () {
 
     counter++;
     text.text = "You clicked " + counter + " times!";
+    image.body.velocity.x = -2 * image.body.velocity.x;
 
 }
 
