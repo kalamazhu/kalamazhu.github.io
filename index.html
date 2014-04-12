@@ -27,7 +27,25 @@ function preload() {
 }
 
 function create(){
-	game.add.sprite(0,0, 'dude');
+	
+	var image = game.add.sprite(game.world.centerX, game.world.centerY, 'dude');
+	image.anchor.set(0.5);
+	image.inputEnabled = true;
+
+    text = game.add.text(250, 16, '', { fill: '#ffffff' });
+
+    image.events.onInputDown.add(listener, this);
+
+}
+
+function listener () {
+
+    counter++;
+    text.text = "You clicked " + counter + " times!";
+
+}
+
+	
 }
 
 </script>
