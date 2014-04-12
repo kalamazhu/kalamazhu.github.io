@@ -19,6 +19,7 @@ var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload:
 
 var text;
 var counter = 0;
+var image;
 function preload() {
 
     game.load.image('sky', 'assets/sky.png');
@@ -30,7 +31,7 @@ function preload() {
 
 function create(){
 	
-	var image = game.add.sprite(0 , game.world.centerY, 'dude');
+	image = game.add.sprite(game.world.centerX , game.world.centerY, 'dude');
 	image.anchor.set(0.5);
 	image.inputEnabled = true;
 
