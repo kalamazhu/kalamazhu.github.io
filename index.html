@@ -37,6 +37,11 @@ function create(){
     text = game.add.text(250, 16, '', { fill: '#ffffff' });
 
     image.events.onInputDown.add(listener, this);
+    
+    game.physics.enable(image, Phaser.Physics.ARCADE);
+
+    image.body.velocity.x=150;
+
 
 }
 
